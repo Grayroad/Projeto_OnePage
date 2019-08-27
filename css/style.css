@@ -1,0 +1,26 @@
+#banner{
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url('../img/banner.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+}
+
+#banner h1{
+    margin-top: 10px;
+    font-size: 80px;
+}
+
+#banner h2{
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
