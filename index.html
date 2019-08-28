@@ -14,6 +14,26 @@
             <h1>DEVCON</h1>
             <h2>Exemplo</h2>
         </div>
+        <nav class="navbar navbar-dark bg-dark affix-top" id="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                        data-target="#nav-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="#banner" class="navbar-brand">DEVCON</a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#agenda">Agenda</a></li>
+                        <li><a href="#palestrantes">Palestrantes</a></li>
+                        <li><a href="#local">Como Chegar</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="sobre">
@@ -21,7 +41,34 @@
                 <div class="row text-center">
                     <h3 class="title">SOBRE</h3>
                 </div>
-                <div class="row"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div id="carousel-sobre" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/curso_00.png" alt=".net">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/curso_01.png" alt="java jsf">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/curso_02.png" alt="css3">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel-sobre" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-item-right carousel-control-next" href="#carousel-sobre" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 content">
+
+                    </div>
+                </div>
             </div>
         </section>
         <section id="agenda">
