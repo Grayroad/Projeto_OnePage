@@ -29,3 +29,27 @@
     margin: 0;
     border-radius: 0;
 }
+
+section{
+    box-sizing: border-box;
+    padding:  20px 0 50px;
+}
+
+section:nth-child(odd){
+    background-color: #e2e2e2;
+}
+
+section .title{
+    display: inline;
+    margin: 10px auto 40px;
+    padding: 0 10px 40px;
+    border-bottom: 3px solid #222
+}
+
+#sobre .content{
+    padding-top: 20px;
+}
+
+#palestrantes .thumbnail img{
+    width: 100%;
+}
