@@ -8,34 +8,36 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#nav-menu" data-offset="150">
     <header>
         <div id="banner">
             <h1>DEVCON</h1>
             <h2>Exemplo</h2>
         </div>
         <!-- <nav class="navbar navbar-dark bg-dark affix-top" id="navbar"> -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
-                        data-target="#nav-menu">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a href="#banner" class="navbar-brand">DEVCON</a>
-                </div>
-                <div class="collapse navbar-collapse" id="nav-menu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                        <li class="nav-item "><a class="nav-link" href="#agenda">Agenda</a></li>
-                        <li class="nav-item "><a class="nav-link" href="#palestrantes">Palestrantes</a></li>
-                        <li class="nav-item "><a class="nav-link" href="#local">Como Chegar</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </header>
+
+    <!-- Solução que encontrei é remover no header e usar o css para adicionar efeito sticky -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#nav-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="#banner" class="navbar-brand">DEVCON</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#palestrantes">Palestrantes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#local">Como Chegar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#assine">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <main>
         <section id="sobre">
             <div class="container">
@@ -47,13 +49,13 @@
                         <div id="carousel-sobre" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="img/curso_00.png" alt=".net">
+                                    <img src="img/curso_00.png" width="100%" alt=".net">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="img/curso_01.png" alt="java jsf">
+                                    <img src="img/curso_01.png" width="100%" alt="java jsf">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="img/curso_02.png" alt="css3">
+                                    <img src="img/curso_02.png" width="100%" alt="css3">
                                 </div>
                             </div>
                         </div>
@@ -131,11 +133,17 @@
             </div>
         </section>
         <section id="local">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row text-center">
-                    <h3 class="title">LOCAL</h3>
+                    <h3 class="title">COMO CHEGAR</h3>
                 </div>
-                <div class="row"></div>
+                <div class="row">
+                    <div class="col-sm-12 iframe-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.610308339558!2d-42.56311738548054!3d-19.47236132926875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xafffe88321cc01%3A0x254833f3683301da!2sR.%20dos%20Xingus%2C%20790%20-%20Igua%C3%A7u%2C%20Ipatinga%20-%20MG%2C%2035162-148!5e0!3m2!1spt-BR!2sbr!4v1567958627153!5m2!1spt-BR!2sbr"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="assine">
@@ -143,11 +151,37 @@
                 <div class="row text-center">
                     <h3 class="title">ASSINE</h3>
                 </div>
-                <div class="row"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Esteja sempre atualizado sobre os últimos eventos!</h4>
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                        <form method="POST" action="https://arquivo.devmedia.com.br/projeto/requisicao.php"
+                            target="_blank">
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="Digite seu e-mail" class="form-control"
+                                    required>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">Enviar!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.youtube.com/c/DevmediaBrasil" target="blank" class="icon-social youtube"
+                data-toggle="tooltip" data-placement="top" title="Assista"></a>
+            <a href="https://twitter.com/devmedia" target="blank" class="icon-social twitter" data-toggle="tooltip"
+                data-placement="top" title="Comente"></a>
+            <a href="https://www.facebook.com/devmedia.com.br" target="blank" class="icon-social facebook"
+                data-toggle="tooltip" data-placement="top" title="Assista"></a>
+        </div>
+        <p class="text-center">@ 2017 - Exemplo One Page Bootstrap - Devmedia</p>
+    </footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
